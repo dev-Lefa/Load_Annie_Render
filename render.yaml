@@ -1,7 +1,0 @@
-services:
-  - type: web
-    name: annie-ai
-    env: python
-    plan: free
-    buildCommand: ""
-    startCommand: python Deploy.py
