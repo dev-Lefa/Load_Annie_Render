@@ -1,0 +1,4 @@
+Flask
+gdown
+requests
+python-dotenv
