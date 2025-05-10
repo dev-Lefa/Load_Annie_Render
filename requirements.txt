@@ -2,3 +2,5 @@ Flask
 gdown
 requests
 python-dotenv
+open-webui
+openai
