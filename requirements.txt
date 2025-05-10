@@ -1,5 +1,0 @@
-Flask
-openai
-requests
-gdown
-python-dotenv
