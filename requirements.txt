@@ -1,5 +1,1 @@
-Flask
-gdown
-requests
-python-dotenv
-openai
+open-webui
