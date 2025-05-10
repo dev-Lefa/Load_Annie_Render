@@ -1,12 +1,17 @@
-import requests
+import gdown
 import os
 
 def download_model():
-    url = "https://drive.google.com/file/d/1hYYCT5Wec4RhmFx5_NGmRfX-sJxLd93P/view?usp=sharing"
+    url = "https://drive.google.com/uc?id=1hYYCT5Wec4RhmFx5_NGmRfX-sJxLd93P"  # ลิงก์ดาวน์โหลด
     local_filename = "Annie-Ai.zip"
+    
+    # ตรวจสอบว่าไฟล์ยังไม่มี
     if not os.path.exists(local_filename):
-        with requests.get(url, stream=True) as r:
-            r.raise_for_status()
-            with open(local_filename, 'wb') as f:
-                for chunk in r.iter_content(chunk_size=8192):
-                    f.write(chunk)
+        print(f"ดาวน์โหลด {local_filename}...")
+        gdown.download(url, local_filename, quiet=False)
+        print("ดาวน์โหลดเสร็จเรียบร้อย!")
+    else:
+        print(f"{local_filename} มีอยู่แล้ว")
+        
+# เรียกใช้งานฟังก์ชัน
+download_model()
